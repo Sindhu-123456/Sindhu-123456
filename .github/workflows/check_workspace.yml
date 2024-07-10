@@ -1,0 +1,13 @@
+name: Check GitHub Workspace Path
+
+on:
+  push:
+    branches:
+      - main  # Change this to your branch name if different
+
+jobs:
+  check-path:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub workspace path
+        run: echo "GitHub workspace is $GITHUB_WORKSPACE"
