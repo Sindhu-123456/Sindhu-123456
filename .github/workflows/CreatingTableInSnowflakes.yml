@@ -30,6 +30,7 @@ jobs:
         SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
         SF_DATABASE: ${{ secrets.SF_DATABASE }}
         SF_PWD: ${{ secrets.SF_PWD }}
+        SNOWFLAKE_AUTHENTICATOR: externalbrowser  # Specify the authenticator here
       run: |
         echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
         python --version
@@ -37,7 +38,7 @@ jobs:
         pip install schemachange
 
         echo "Step 2: Running schemachange"
-        schemachange -f $GITHUB_WORKSPACE/Deployments \
+        schemachange -f $GITHUB_WORKSPACE/Sindhu-123456/Deployments \
                      -a $SP_ACCOUNT \
                      -u $SF_USERNAME \
                      -r $SF_ROLE \
