@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-snowflake-changes-job:
+  deployments-snowflake-changes-job:
     runs-on: ubuntu-latest
 
     steps:
