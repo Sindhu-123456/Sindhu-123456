@@ -24,7 +24,7 @@ jobs:
 
     - name: Run schemachange
       env:
-        SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
+        SP_ACCOUNT: ${{ secrets.SP_ACCOUNT }}
         SF_USERNAME: ${{ secrets.SF_USERNAME }}
         SF_ROLE: ${{ secrets.SF_ROLE }}
         SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
@@ -38,7 +38,7 @@ jobs:
 
         echo "Step 2: Running schemachange"
         schemachange -f $GITHUB_WORKSPACE/deployments \
-                     -a $SF_ACCOUNT \
+                     -a $SP_ACCOUNT \
                      -u $SF_USERNAME \
                      -r $SF_ROLE \
                      -w $SF_WAREHOUSE \
