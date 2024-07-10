@@ -38,7 +38,7 @@ jobs:
         pip install schemachange
 
         echo "Step 2: Running schemachange"
-        schemachange -f $GITHUB_WORKSPACE/Sindhu-123456/Deployments \
+        schemachange -f $GITHUB_WORKSPACE/Deployments \
                      -a $SP_ACCOUNT \
                      -u $SF_USERNAME \
                      -r $SF_ROLE \
