@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'deployments/**'
+      - 'Deployments/**'
       
   workflow_dispatch:
 
 jobs:
-  deployments-snowflake-changes-job:
+  Deployments-snowflake-changes-job:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,7 +37,7 @@ jobs:
         pip install schemachange
 
         echo "Step 2: Running schemachange"
-        schemachange -f $GITHUB_WORKSPACE/deployments \
+        schemachange -f $GITHUB_WORKSPACE/Deployments \
                      -a $SP_ACCOUNT \
                      -u $SF_USERNAME \
                      -r $SF_ROLE \
